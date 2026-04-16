@@ -4,7 +4,9 @@ on:
   schedule:
     # 马来西亚时间 08:00 = UTC 00:00
     - cron: '0 0 * * *'
-
+  # 允许手动触发，方便调试
+  workflow_dispatch:
+  
 jobs:
   send-digest:
     runs-on: ubuntu-latest
